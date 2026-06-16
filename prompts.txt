@@ -1,0 +1,22 @@
+I want to create a kitchen management system.  I have some notes on the data model I wish to use, as well as some ideas for the high level design.  How do I share these with Junie?
+
+I have created 2 files in the docs directory.  Please review the design_overview.txt and data_model.txt files
+
+I would like to set up the basic project structure for the first service.
+
+create the fry line station as a module
+
+implement the fry line service
+
+Add a NATs client component to the fry line service.  Use the Gateway pattern.
+
+Use this for the nats dependencies:
+        <dependency>
+            <groupId>dev.all-things.boot</groupId>
+            <artifactId>nats-spring-boot-starter</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
+the fry line service needs a spring Service component and FryLineController should delegate to the service component.
+
+the fry line service should be in its own 'service' package

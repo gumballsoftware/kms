@@ -1,0 +1,24 @@
+The core data model will be product, menu, menu item, order, order item, recipe, and assembly.
+
+A menu has a name, two timestamps, and a set of menu items.  One timestamp will denote the time when the menu
+is in service and the other will denote the time the menu goes out of service.
+
+A product is a food item or a drink item.  "Cheeseburger", for example.
+
+A menu item is an aggregation of one or more products.  "Cheeseburger meal, containing a cheeseburger, a side item,
+and a regular drink", for example.
+
+A recipe is a set of ingredients plus processing instructions for creating a product.
+
+An order item is a menu item with (optionally) additional processing instructions.
+"Cheeseburger meal with fries and Diet Coke and extra pickles", for example.
+
+An assembly is a set of instructions for packaging a menu item to fulfill a customer order or order item.  Plating
+or packing instructions are examples of assembly instructions.
+
+Station assembly instructions describe how an order item is to be processed at a station.
+
+The station data model will include assembly instructions.
+
+assembly is menu item plus processing instructions
+order item is menu item with optional customization instructions

@@ -1,0 +1,24 @@
+burgerman is an automation platform for quick service restaraunts.  The system design is partitioned into stations and each station
+handles a set of tasks for service operation.  The base stations are point of sale, fry line, grill line, sandwich line, assembly.
+The default flow control is choreography; each station is governed by a FIFO/best effort strategy.  Eventually we will offer the
+option of an orchestrated flow control.  For this option there will be an orchestration component called 'Kitchen Orchestrator'.
+The point of sale station will act as the parent station.
+
+The system will be a collection of spring boot applications.  The applications will receive REST requests and will send
+NATS messages.  Some of the stations will listen for NATs messages.
+
+A station will be a spring boot application with a REST API.  The API will have a POST method which takes an order and returns an
+acknowledgement.  The acknowledgement will include a status, which is one of ACK, NA.  If status is NA then no other attributes will
+be included in the return.  The status is NA if none of the Order's items are handled by the station.  Any order items
+which require processing by the station will be written to the station's big queue and the order items will be included
+in the response, along with a timestamp.  The timestamp represents the predicted completion time of the line item.
+When a station has completed the production of an orderLineItem it will send an ITEM COMPLETE message to the KITCHEN SERVICE topic.
+
+Each station will have a database to store the station's assembly instructions and operational state.  Each station will have its
+own Big Queue instance.  Big Queue is com.leansoft.bigqueue.  Each station application will use Spring Data JPA and H2 will be the
+datastore.
+
+The point of sale station, being the parent station, will own the core data model as well as a station model.  In addition,
+the point of sale station's application will include a NatsListener (from dev.all-things.boot.nats-spring-boot-starter).
+The NatsListener will be configured to listen to the KITCHEN SERVICE topic.  When a message is received on this topic
+the station will update the order's status and, if the order is complete, execute an "order complete" strategy.
