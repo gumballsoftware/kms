@@ -18,11 +18,9 @@ then no other attributes will be included in the return.  The status is NA if no
  ITEM COMPLETE message to the KITCHEN SERVICE topic.
 
 Each station will have a database to store the station's assembly instructions and operational state.  Each station
-will have its own Big Queue instance.  Big Queue is com.leansoft.bigqueue.  Each station application will use Spring
-Data JPA and H2 will be the datastore.
+application will use Spring Data JPA and H2 will be the datastore.
 
-The point of sale station, being the parent station, will own the core data model as well as a station model.  In
-addition, the point of sale station's application will include a NatsListener
-(from dev.all-things.boot.nats-spring-boot-starter).  The NatsListener will be configured to listen to the
-KITCHEN SERVICE topic.  When a message is received on this topic the station will update the order's status and,
-if the order is complete, execute an "order complete" strategy.
+'kms-kitchen', being the parent application, will own the core data model.  The point of sale station's application
+will include a NatsListener (from dev.all-things.boot.nats-spring-boot-starter).  The NatsListener will be configured
+to listen to the KITCHEN SERVICE topic.  When a message is received on this topic the station will update the
+order's status and, if the order is complete, execute an "order complete" strategy.

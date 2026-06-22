@@ -13,6 +13,14 @@
     <artifactId>kms-fry-line-service</artifactId>
 
     <dependencies>
+        <!-- Source: https://mvnrepository.com/artifact/io.nats/nats-spring -->
+        <dependency>
+            <groupId>io.nats</groupId>
+            <artifactId>nats-spring</artifactId>
+            <version>0.6.2+3.5</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.gumball.burgerman</groupId>
             <artifactId>kms-common</artifactId>

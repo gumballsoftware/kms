@@ -18,6 +18,14 @@
             <artifactId>kms-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.nats</groupId>
+            <artifactId>jnats</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

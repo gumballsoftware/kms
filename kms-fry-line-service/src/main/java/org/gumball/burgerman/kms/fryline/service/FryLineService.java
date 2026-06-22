@@ -29,9 +29,8 @@ public class FryLineService implements StationService {
         if (handledItems.isEmpty()) {
             return new Acknowledgement("NA", null, null);
         }
-
-        // Add to "big queue" (simulated by gateway for now)
-        natsGateway.sendOrderItems(handledItems);
+        // FIXME: sort out the gateway
+//        natsGateway.sendOrderItems(handledItems);
 
         return new Acknowledgement("ACK", handledItems, Instant.now().plusSeconds(300).toString());
     }
