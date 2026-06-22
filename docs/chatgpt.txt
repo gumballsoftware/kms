@@ -1,0 +1,208 @@
+I am planning to open a hamburger stand and I would like you to suggest a menu. The hamburger stand will be a
+quick service restaurant, specializing in hamburgers. It will also offer chicken nuggets, chicken sandwiches,
+and onion rings
+
+
+For a quick-service hamburger stand, the strongest menus are usually **focused, fast, and easy to execute consistently**. Rather than offering dozens of items, build around a small number of burgers with customizable toppings.
+
+# Hamburger Stand Menu
+
+## Signature Burgers
+
+### Classic Hamburger
+
+Fresh beef patty, pickle, mustard, ketchup, diced onions
+
+### Classic Cheeseburger
+
+Fresh beef patty, American cheese, pickle, mustard, ketchup, diced onions
+
+### Double Cheeseburger
+
+Two beef patties, two slices of American cheese, pickle, mustard, ketchup, diced onions
+
+### Bacon Cheeseburger
+
+Fresh beef patty, bacon, American cheese, lettuce, tomato, mayo
+
+### BBQ Bacon Burger
+
+Fresh beef patty, bacon, cheddar cheese, crispy onions, BBQ sauce
+
+### Mushroom Swiss Burger
+
+Fresh beef patty, sautéed mushrooms, Swiss cheese, garlic aioli
+
+### Signature Stand Burger
+
+Double beef patties, American cheese, lettuce, tomato, pickles, onions, special sauce
+
+---
+
+## Chicken Sandwiches
+
+### Crispy Chicken Sandwich
+
+Breaded chicken breast, pickles, mayo
+
+### Spicy Chicken Sandwich
+
+Spicy breaded chicken breast, pickles, spicy sauce
+
+### Deluxe Chicken Sandwich
+
+Breaded chicken breast, lettuce, tomato, pickles, mayo
+
+### Grilled Chicken Sandwich
+
+Grilled chicken breast, lettuce, tomato, honey mustard
+
+---
+
+## Chicken Nuggets
+
+### Chicken Nuggets
+
+* 4 Piece
+* 6 Piece
+* 10 Piece
+* 20 Piece Family Pack
+
+### Dipping Sauces
+
+* BBQ
+* Ranch
+* Honey Mustard
+* Buffalo
+* Sweet & Sour
+* Signature Sauce
+
+---
+
+## Sides
+
+### French Fries
+
+* Small
+* Medium
+* Large
+
+### Onion Rings
+
+* Small
+* Large
+
+### Loaded Fries (Optional Premium Side)
+
+Fries topped with cheese sauce, bacon, and green onions
+
+---
+
+## Beverages
+
+### Fountain Drinks
+
+* Small
+* Medium
+* Large
+
+### Sweet Tea
+
+### Unsweet Tea
+
+### Lemonade
+
+### Bottled Water
+
+---
+
+## Desserts
+
+### Hand-Spun Milkshakes
+
+* Vanilla
+* Chocolate
+* Strawberry
+
+### Fresh-Baked Cookie
+
+### Ice Cream Sundae
+
+---
+
+# Combo Meals
+
+### Burger Combo
+
+Any burger + fries or onion rings + drink
+
+### Chicken Sandwich Combo
+
+Any chicken sandwich + fries or onion rings + drink
+
+### Nugget Combo
+
+10-piece nuggets + fries + drink
+
+---
+
+# Add-Ons
+
+### Cheese Options
+
+* American
+* Cheddar
+* Swiss
+* Pepper Jack
+
+### Premium Toppings
+
+* Bacon
+* Grilled Onions
+* Sautéed Mushrooms
+* Jalapeños
+* Extra Patty
+
+### Standard Toppings
+
+* Lettuce
+* Tomato
+* Pickles
+* Onions
+* Ketchup
+* Mustard
+* Mayo
+
+---
+
+# Suggested Best-Selling Core Menu
+
+If you're opening your first location, I'd simplify to:
+
+**Burgers**
+
+1. Classic Cheeseburger
+2. Double Cheeseburger
+3. Bacon Cheeseburger
+4. Signature Stand Burger
+
+**Chicken**
+5. Crispy Chicken Sandwich
+6. Spicy Chicken Sandwich
+7. Chicken Nuggets
+
+**Sides**
+8. Fries
+9. Onion Rings
+
+**Desserts**
+10. Three milkshake flavors
+
+This keeps inventory manageable, speeds service, reduces food waste, and still gives customers enough variety.
+The most profitable quick-service restaurants often succeed by doing a small number of items exceptionally well.
+
+
+
+*********************************************************************************************************
+Write instructions for the kitchen staff so we can standardize the cooking and preparation of menu items.
+Use the core menu, please.

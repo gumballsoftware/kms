@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="junie">
+        <createTable tableName="product">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="menu_item">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="menu">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="start_time" type="TIMESTAMP"/>
+            <column name="end_time" type="TIMESTAMP"/>
+        </createTable>
+
+        <createTable tableName="menu_menu_items">
+            <column name="menu_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="menu_item_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="menu_menu_items" columnNames="menu_id, menu_item_id"/>
+        <addForeignKeyConstraint baseTableName="menu_menu_items" baseColumnNames="menu_id" constraintName="fk_menu_menu_items_menu" referencedTableName="menu" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="menu_menu_items" baseColumnNames="menu_item_id" constraintName="fk_menu_menu_items_item" referencedTableName="menu_item" referencedColumnNames="id"/>
+
+        <createTable tableName="menu_item_products">
+            <column name="menu_item_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="menu_item_products" columnNames="menu_item_id, product_id"/>
+        <addForeignKeyConstraint baseTableName="menu_item_products" baseColumnNames="menu_item_id" constraintName="fk_menu_item_products_item" referencedTableName="menu_item" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="menu_item_products" baseColumnNames="product_id" constraintName="fk_menu_item_products_product" referencedTableName="product" referencedColumnNames="id"/>
+
+        <createTable tableName="recipe">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="instructions" type="CLOB"/>
+        </createTable>
+
+        <createTable tableName="recipe_ingredients">
+            <column name="recipe_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ingredients" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="recipe_ingredients" baseColumnNames="recipe_id" constraintName="fk_recipe_ingredients_recipe" referencedTableName="recipe" referencedColumnNames="id"/>
+
+        <createTable tableName="kitchen_order">
+            <column name="id" type="VARCHAR(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="order_item">
+            <column name="id" type="VARCHAR(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="menu_item_name" type="VARCHAR(255)"/>
+            <column name="customization_instructions" type="CLOB"/>
+            <column name="order_id" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="order_item" baseColumnNames="order_id" constraintName="fk_order_item_order" referencedTableName="kitchen_order" referencedColumnNames="id"/>
+
+        <createTable tableName="assembly">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="menu_item_name" type="VARCHAR(255)"/>
+            <column name="processing_instructions" type="CLOB"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
