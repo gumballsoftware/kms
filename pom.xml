@@ -8,11 +8,12 @@
     <artifactId>kms</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-
+    <name>Hamburger Stand</name>
     <modules>
         <module>kms-common</module>
         <module>kms-station-service</module>
         <module>kms-fry-line-service</module>
+        <module>kms-kitchen</module>
     </modules>
 
     <properties>

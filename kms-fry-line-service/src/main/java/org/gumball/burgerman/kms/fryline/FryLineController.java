@@ -1,6 +1,6 @@
 package org.gumball.burgerman.kms.fryline;
 
-import org.gumball.burgerman.kms.fryline.model.Acknowledgement;
+import org.gumball.burgerman.kms.common.model.Acknowledgement;
 import org.gumball.burgerman.kms.common.model.Order;
 import org.gumball.burgerman.kms.fryline.service.FryLineService;
 import org.springframework.web.bind.annotation.PostMapping;

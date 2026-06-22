@@ -1,8 +1,10 @@
 package org.gumball.burgerman.kms.fryline.service;
 
-import org.gumball.burgerman.kms.fryline.model.Acknowledgement;
+import org.gumball.burgerman.kms.fryline.FryLineNatsGateway;
+import org.gumball.burgerman.kms.common.model.Acknowledgement;
 import org.gumball.burgerman.kms.common.model.Order;
 import org.gumball.burgerman.kms.common.model.OrderItem;
+import org.gumball.burgerman.kms.station.service.StationService;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -10,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class FryLineService {
+public class FryLineService implements StationService {
 
     private final FryLineNatsGateway natsGateway;
 

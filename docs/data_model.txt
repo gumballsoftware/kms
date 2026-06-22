@@ -1,4 +1,4 @@
-The core data model will be product, menu, menu item, order, order item, recipe, and assembly.
+  The core data model will be product, menu, menu item, order, order item, recipe, and assembly.
 
 A menu has a name, two timestamps, and a set of menu items.  One timestamp will denote the time when the menu
 is in service and the other will denote the time the menu goes out of service.
@@ -22,3 +22,28 @@ The station data model will include assembly instructions.
 
 assembly is menu item plus processing instructions
 order item is menu item with optional customization instructions
+
+The products are: regular hamburger, small hamburger, chicken sandwich, spicy chicken sandwich, chicken nuggets,
+french fries, onion rings, soft drinks, iced tea, vanilla soft serve ice cream, chocolate soft serve ice cream.
+
+The fry line is responsible for producing:
+fried chicken fillets
+fried chicken nuggets
+french fries
+onion rings
+
+The fry line has 2 fryers.  One is for frying chicken only.  The fryers use peanut oil and the normal operating
+temperature of each fryer is 350 degrees fahrenheit.
+
+Chicken fillets are frozen and prebreaded.  Cooking time is 3.5 minutes.
+Chicken nuggets are frozen and prebreaded.  Cooking time is 3.0 minutes.
+Onion rings are frozen and prebreaded.  Cooking time is 2.5 minutes.
+French fries are frozen and precute.  Cooking time is 3.0 minutes.
+
+A chicken sandwich requires 1 chicken fillet.
+A spicy chicken sandwich requires 1 spicy chicken fillet.
+Chicken nuggets are cooked in batches and held at temperature until needed.  Batch size depends on the time of day.
+During peak times of service the fry line cooks batches of 12 nuggets, continuously replenishing the holding bin.
+French fries are cooked in batches and held at temperature until needed.  Batch size depends on the time of day.
+During peak times of service the fry line cooks 1 entire bag of french fries, continuously replenishing the holding bin.
+
