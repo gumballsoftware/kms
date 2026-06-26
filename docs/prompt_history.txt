@@ -31,3 +31,11 @@ We still need Order and OrderItem entities in the kms-kitchen module
 what's a good way to create a DB scheme for kms-kitchen, given that entities are already defined?
 
 Make it so, using liquibase
+
+Please review the updates to data_model.txt and create a set of entities for the fry line station module.
+
+BatchHoldingSchedule needs a dayOfWeek attribute.  Use java.time.DayOfWeek
+
+Use lombok throughout this project
+
+Remove lombok throughout this project

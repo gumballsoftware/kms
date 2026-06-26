@@ -1,4 +1,4 @@
-  The core data model will be product, menu, menu item, order, order item, recipe, and assembly.
+The core data model will be product, menu, menu item, order, order item, recipe, and assembly.
 
 A menu has a name, two timestamps, and a set of menu items.  One timestamp will denote the time when the menu
 is in service and the other will denote the time the menu goes out of service.
@@ -34,6 +34,10 @@ onion rings
 
 The fry line has 2 fryers.  One is for frying chicken only.  The fryers use peanut oil and the normal operating
 temperature of each fryer is 350 degrees fahrenheit.
+The fry line has 2 holding bins: 1 for chicken and 1 for french fries and onion rings.  A holding bin is acts as a
+staging area where freshly fried products are dumped to drain excess oil, get salted, and be held at optimal serving
+temperatures before packaging.  In times of high demand the fry line can use these as a buffer, cooking food before
+it is needed.  This creates a bit of elasticity in the flow but can also lead to waste and poor service if over-used.
 
 Chicken fillets are frozen and prebreaded.  Cooking time is 3.5 minutes.
 Chicken nuggets are frozen and prebreaded.  Cooking time is 3.0 minutes.
@@ -46,4 +50,13 @@ Chicken nuggets are cooked in batches and held at temperature until needed.  Bat
 During peak times of service the fry line cooks batches of 12 nuggets, continuously replenishing the holding bin.
 French fries are cooked in batches and held at temperature until needed.  Batch size depends on the time of day.
 During peak times of service the fry line cooks 1 entire bag of french fries, continuously replenishing the holding bin.
+French fries are cooked in batches and held at temperature until needed.
+Onion rings are cooked to order.
+Chicken fillets are cooked to order.
 
+The fry line station needs a data schema for the following:
+Cooking and processing instructions for products.
+Processing instructions include max holding times for french fries and chicken nuggets.
+Cooking schedule for batches of chicken nuggets and batches of french fries.
+The schedule will specify the # of batches to hold for each hour of service.  The schedule will be a function of the
+daily demand model for the kitchen.

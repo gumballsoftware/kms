@@ -29,9 +29,13 @@ public class FryLineService implements StationService {
         if (handledItems.isEmpty()) {
             return new Acknowledgement("NA", null, null);
         }
-        // FIXME: sort out the gateway
-//        natsGateway.sendOrderItems(handledItems);
+
+        handledItems.forEach(this::processOrderItem);
 
         return new Acknowledgement("ACK", handledItems, Instant.now().plusSeconds(300).toString());
+    }
+
+    protected void processOrderItem(OrderItem orderItem) {
+
     }
 }
